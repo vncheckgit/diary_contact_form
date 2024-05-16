@@ -174,15 +174,18 @@
                 <div class="mb-3">
                     <label class="form-label">Anh chị cần hỗ trợ gì</label><br>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="support1" name="support1" value="Tiêu chuẩn chất lượng">
+                        <input class="form-check-input" type="checkbox" id="support1" name="support1"
+                            value="Tiêu chuẩn chất lượng">
                         <label class="form-check-label" for="support1">Tiêu chuẩn chất lượng</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="support2" name="support2" value="Quy trình canh tác">
+                        <input class="form-check-input" type="checkbox" id="support2" name="support2"
+                            value="Quy trình canh tác">
                         <label class="form-check-label" for="support2">Quy trình canh tác</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="support3" name="support3" value="Phân phối sản phẩm hàng hoá">
+                        <input class="form-check-input" type="checkbox" id="support3" name="support3"
+                            value="Phân phối sản phẩm hàng hoá">
                         <label class="form-check-label" for="support3">Phân phối sản phẩm hàng hoá</label>
                     </div>
                 </div>
@@ -258,22 +261,6 @@
             form.addEventListener("submit", function (event) {
                 event.preventDefault(); // Ngăn form gửi thông tin một cách thông thường
                 overlay.style.display = "flex"; // Hiển thị lớp phủ
-            });
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const checkboxes = document.querySelectorAll('.form-check-input');
-            
-            checkboxes.forEach(checkbox => {
-                checkbox.addEventListener('click', function () {
-                    const checkedCheckboxes = document.querySelectorAll('.form-check-input:checked');
-                    if (checkedCheckboxes.length === 0) {
-                        alert('Vui lòng chọn ít nhất một mục hỗ trợ');
-                        // Nếu muốn ngăn chặn việc gửi biểu mẫu khi không có checkbox nào được chọn, bạn có thể sử dụng return false; ở đây.
-                        // return false;
-                    }
-                });
             });
         });
     </script>
