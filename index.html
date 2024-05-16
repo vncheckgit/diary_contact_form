@@ -138,10 +138,16 @@
                 </div>
                 <div class="mb-3">
                     <label for="unit" class="form-label">Thời gian</label>
-                    <select class="form-select" id="time" name="time" required>
-                        <option value="Tháng">Tháng</option>
-                        <option value="Năm">Năm</option>
-                    </select>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="time" id="plant" value="Tháng"
+                            required>
+                        <label class="form-check-label" for="plant">Tháng</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="time" id="animal" value="Năm"
+                            required>
+                        <label class="form-check-label" for="animal">Năm</label>
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label class="form-label d-block">Tiêu chuẩn</label>
