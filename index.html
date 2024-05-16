@@ -49,10 +49,40 @@
         .section h2 {
             text-align: center;
         }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Màu sắc và độ mờ của lớp phủ */
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; /* Đảm bảo lớp phủ nằm trên mọi nội dung khác */
+        }
+
+        .spinner {
+            border: 6px solid #f3f3f3; /* Màu của vòng tròn */
+            border-top: 6px solid #3498db; /* Màu của phần trên cùng của vòng tròn */
+            border-radius: 50%; /* Hình dạng của vòng tròn */
+            width: 50px; /* Đường kính của vòng tròn */
+            height: 50px; /* Đường kính của vòng tròn */
+            animation: spin 1s linear infinite; /* Hiệu ứng quay vòng */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
 </head>
 
 <body>
+    <div class="overlay" id="overlay">
+        <div class="spinner"></div>
+    </div>
     <div class="container mt-5" style="margin-bottom: 10vh;">
         <img class="header-image" src="km_nkdt.jpg" alt="Header Image">
         <form id="multi-section-form" method="post"
@@ -95,7 +125,11 @@
                 </div>
                 <div class="mb-3">
                     <label for="quantity" class="form-label">Sản lượng</label>
-                    <select class="form-select" id="quantity" name="quantity" required>
+                    <input type="number" class="form-control" id="quantity" name="quantity" required>
+                </div>
+                <div class="mb-3">
+                    <label for="unit" class="form-label">Sản lượng</label>
+                    <select class="form-select" id="unit" name="unit" required>
                         <option value="Kg">Kg</option>
                         <option value="Tấn">Tấn</option>
                         <option value="Hộp">Hộp</option>
@@ -198,6 +232,18 @@
             });
         });
 
+    </script>
+    <script>
+        // Hiển thị lớp phủ và biểu tượng Spinner khi nút Submit được nhấn
+        document.addEventListener("DOMContentLoaded", function () {
+            var form = document.getElementById("multi-section-form");
+            var overlay = document.getElementById("overlay");
+    
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // Ngăn form gửi thông tin một cách thông thường
+                overlay.style.display = "flex"; // Hiển thị lớp phủ
+            });
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
