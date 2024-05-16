@@ -107,21 +107,23 @@
                 <h2>Thông tin sản xuất</h2>
                 <div class="mb-3">
                     <label class="form-label d-block">Tên chủng loại</label>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="category" id="plant" value="cây trồng"
-                            required>
-                        <label class="form-check-label" for="plant">Cây trồng</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="category" id="animal" value="vật nuôi"
-                            required>
-                        <label class="form-check-label" for="animal">Vật nuôi</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="category" id="product" value="sản phẩm"
-                            required>
-                        <label class="form-check-label" for="product">Sản phẩm</label>
-                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div class="form-check form-check-inline" style="flex: 1;">
+                            <input class="form-check-input" type="radio" name="category" id="plant" value="cây trồng"
+                                required>
+                            <label class="form-check-label" for="plant">Cây trồng</label>
+                        </div>
+                        <div class="form-check form-check-inline" style="flex: 1;">
+                            <input class="form-check-input" type="radio" name="category" id="animal" value="vật nuôi"
+                                required>
+                            <label class="form-check-label" for="animal">Vật nuôi</label>
+                        </div>
+                        <div class="form-check form-check-inline" style="flex: 1;">
+                            <input class="form-check-input" type="radio" name="category" id="product" value="sản phẩm"
+                                required>
+                            <label class="form-check-label" for="product">Sản phẩm</label>
+                        </div>
+                    </div>               
                 </div>
                 <div class="mb-3">
                     <label for="quantity" class="form-label">Sản lượng</label>
@@ -138,26 +140,30 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label d-block">Thời gian</label>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="time" id="month" value="Tháng"
-                            required>
-                        <label class="form-check-label" for="plant">Tháng</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="time" id="year" value="Năm"
-                            required>
-                        <label class="form-check-label" for="animal">Năm</label>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div class="form-check form-check-inline" style="flex: 1;">
+                            <input class="form-check-input" type="radio" name="time" id="month" value="Tháng"
+                                required>
+                            <label class="form-check-label" for="month">Tháng</label>
+                        </div>
+                        <div class="form-check form-check-inline" style="flex: 1;">
+                            <input class="form-check-input" type="radio" name="time" id="year" value="Năm"
+                                required>
+                            <label class="form-check-label" for="year">Năm</label>
+                        </div>
                     </div>
                 </div>
                 <div class="mb-3">
                     <label class="form-label d-block">Tiêu chuẩn</label>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="standard" id="yes" value="Có" required>
-                        <label class="form-check-label" for="yes">Có</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="standard" id="no" value="Không" required>
-                        <label class="form-check-label" for="no">Không</label>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div class="form-check form-check-inline" style="flex: 1;">
+                            <input class="form-check-input" type="radio" name="standard" id="yes" value="Có" required>
+                            <label class="form-check-label" for="yes">Có</label>
+                        </div>
+                        <div class="form-check form-check-inline" style="flex: 1;">
+                            <input class="form-check-input" type="radio" name="standard" id="no" value="Không" required>
+                            <label class="form-check-label" for="no">Không</label>
+                        </div>
                     </div>
                 </div>
                 <button type="button" class="btn btn-secondary" onclick="previousSection(1)">Previous</button>
@@ -168,18 +174,15 @@
                 <div class="mb-3">
                     <label class="form-label">Anh chị cần hỗ trợ gì</label><br>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="support1" name="support1"
-                            value="Tiêu chuẩn chất lượng">
+                        <input class="form-check-input" type="checkbox" id="support1" name="support1" value="Tiêu chuẩn chất lượng">
                         <label class="form-check-label" for="support1">Tiêu chuẩn chất lượng</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="support2" name="support2"
-                            value="Quy trình canh tác">
+                        <input class="form-check-input" type="checkbox" id="support2" name="support2" value="Quy trình canh tác">
                         <label class="form-check-label" for="support2">Quy trình canh tác</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="support3" name="support3"
-                            value="Phân phối sản phẩm hàng hoá">
+                        <input class="form-check-input" type="checkbox" id="support3" name="support3" value="Phân phối sản phẩm hàng hoá">
                         <label class="form-check-label" for="support3">Phân phối sản phẩm hàng hoá</label>
                     </div>
                 </div>
@@ -255,6 +258,22 @@
             form.addEventListener("submit", function (event) {
                 event.preventDefault(); // Ngăn form gửi thông tin một cách thông thường
                 overlay.style.display = "flex"; // Hiển thị lớp phủ
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const checkboxes = document.querySelectorAll('.form-check-input');
+            
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('click', function () {
+                    const checkedCheckboxes = document.querySelectorAll('.form-check-input:checked');
+                    if (checkedCheckboxes.length === 0) {
+                        alert('Vui lòng chọn ít nhất một mục hỗ trợ');
+                        // Nếu muốn ngăn chặn việc gửi biểu mẫu khi không có checkbox nào được chọn, bạn có thể sử dụng return false; ở đây.
+                        // return false;
+                    }
+                });
             });
         });
     </script>
