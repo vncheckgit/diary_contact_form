@@ -11,17 +11,12 @@
 
     <style>
         body {
-            background: linear-gradient(to bottom, #DFFFD7,  #90EE90);
-
-            height: auto;
-
-            /* Đảm bảo nền bao phủ toàn bộ chiều cao trang */
             margin: 0;
-            background-repeat: no-repeat;
-            /* Loại bỏ margin mặc định */
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(to bottom, #90EE90, #DFFFD7);
         }
-
-
+        
         .section {
             display: none;
         }
@@ -43,6 +38,7 @@
             display: block;
             margin: 0 auto;
             border-radius: 8px;
+            margin-top: 2vh;
             margin-bottom: 2vh;
             transition: width 0.3s ease;
         }
@@ -109,10 +105,8 @@
     <div class="overlay" id="overlay">
         <div class="spinner"></div>
     </div>
-    <div class="container mt-5" style="margin-bottom: 10vh;">
-        <br>
-        <br>
-        <img class="header-image" src="km_nkdt.jpg" alt="Header Image">
+    <img class="header-image" src="km_nkdt.jpg" alt="Header Image">
+    <div class="container mt-5" style="margin-bottom: 10vh; margin-top: 2vh;">   
         <form id="multi-section-form" method="post"
             action="https://script.google.com/macros/s/AKfycbx2tQ6Eh3o_0erSGqmIOJR8pR7g9aG2uPJwkCDSWSuVIbBFsVE3oc_vJkhQtw3KYd_s/exec">
             <div class="section active" id="section1">
