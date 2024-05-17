@@ -73,8 +73,13 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
@@ -101,7 +106,9 @@
                     <label for="email" class="form-label">Email</label>
                     <input type="email" class="form-control" id="email" name="email" required>
                 </div>
-                <button type="button" class="btn btn-primary" onclick="validateNext(2)">Next</button>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary" onclick="validateNext(2)">Tiếp theo</button>
+                </div>
             </div>
             <div class="section" id="section2">
                 <h2>Thông tin sản xuất</h2>
@@ -123,7 +130,7 @@
                                 required>
                             <label class="form-check-label" for="product">Sản phẩm</label>
                         </div>
-                    </div>               
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label for="quantity" class="form-label">Sản lượng</label>
@@ -142,13 +149,11 @@
                     <label class="form-label d-block">Thời gian</label>
                     <div style="display: flex; justify-content: space-between;">
                         <div class="form-check form-check-inline" style="flex: 1;">
-                            <input class="form-check-input" type="radio" name="time" id="month" value="Tháng"
-                                required>
+                            <input class="form-check-input" type="radio" name="time" id="month" value="Tháng" required>
                             <label class="form-check-label" for="month">Tháng</label>
                         </div>
                         <div class="form-check form-check-inline" style="flex: 1;">
-                            <input class="form-check-input" type="radio" name="time" id="year" value="Năm"
-                                required>
+                            <input class="form-check-input" type="radio" name="time" id="year" value="Năm" required>
                             <label class="form-check-label" for="year">Năm</label>
                         </div>
                     </div>
@@ -166,8 +171,10 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btn btn-secondary" onclick="previousSection(1)">Previous</button>
-                <button type="button" class="btn btn-primary" onclick="validateNext(3)">Next</button>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-secondary" onclick="previousSection(1)">Quay lại</button>
+                    <button type="button" class="btn btn-primary ms-2" onclick="validateNext(3)">Tiếp theo</button>
+                </div>
             </div>
             <div class="section" id="section3">
                 <h2>Thông tin cần hỗ trợ</h2>
@@ -189,8 +196,10 @@
                         <label class="form-check-label" for="support3">Phân phối sản phẩm hàng hoá</label>
                     </div>
                 </div>
-                <button type="button" class="btn btn-secondary" onclick="previousSection(2)">Previous</button>
-                <button type="submit" class="btn btn-success">Submit</button>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-secondary" onclick="previousSection(2)">Quay lại</button>
+                    <button type="submit" class="btn btn-success ms-2">Xác nhận</button>
+                </div>
             </div>
         </form>
     </div>
@@ -204,8 +213,7 @@
         }
 
         function previousSection(sectionNumber) {
-            const currentSection
-                = document.querySelector('.section.active');
+            const currentSection = document.querySelector('.section.active');
             currentSection.classList.remove('active');
 
             const previousSection = document.querySelector(`#section${sectionNumber}`);
@@ -257,7 +265,7 @@
         document.addEventListener("DOMContentLoaded", function () {
             var form = document.getElementById("multi-section-form");
             var overlay = document.getElementById("overlay");
-    
+
             form.addEventListener("submit", function (event) {
                 event.preventDefault(); // Ngăn form gửi thông tin một cách thông thường
                 overlay.style.display = "flex"; // Hiển thị lớp phủ
