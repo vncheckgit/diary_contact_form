@@ -94,7 +94,7 @@
         <form id="multi-section-form" method="post"
             action="https://script.google.com/macros/s/AKfycbx2tQ6Eh3o_0erSGqmIOJR8pR7g9aG2uPJwkCDSWSuVIbBFsVE3oc_vJkhQtw3KYd_s/exec">
             <div class="section active" id="section1">
-                <h2>Thông tin chủ thể</h2>
+                <h2>THÔNG TIN SẢN XUẤT</h2>
                 <div class="mb-3">
                     <label for="organization" class="form-label">Tên đơn vị</label>
                     <input type="text" class="form-control" id="organization" name="organization" required>
@@ -107,12 +107,14 @@
                     <label for="email" class="form-label">Email</label>
                     <input type="email" class="form-control" id="email" name="email" required>
                 </div>
+                <br>
+                <br>
                 <div class="d-flex justify-content-center">
                     <button type="button" class="btn btn-primary" onclick="validateNext(2)">Tiếp theo</button>
                 </div>
             </div>
             <div class="section" id="section2">
-                <h2>Thông tin sản xuất</h2>
+                <h2>THÔNG TIN SẢN XUẤT</h2>
                 <div class="mb-3">
                     <label class="form-label d-block">Tên chủng loại</label>
                     <div style="display: flex; justify-content: space-between;">
@@ -172,13 +174,15 @@
                         </div>
                     </div>
                 </div>
+                <br>
+                <br>
                 <div class="d-flex justify-content-center">
                     <button type="button" class="btn btn-secondary" onclick="previousSection(1)">Quay lại</button>
                     <button type="button" class="btn btn-primary ms-2" onclick="validateNext(3)">Tiếp theo</button>
                 </div>
             </div>
             <div class="section" id="section3">
-                <h2>Thông tin cần hỗ trợ</h2>
+                <h2>THÔNG TIN CẦN HỖ TRỢ</h2>
                 <div class="mb-3">
                     <label class="form-label">Anh chị cần hỗ trợ gì</label><br>
                     <div class="form-check">
@@ -197,6 +201,8 @@
                         <label class="form-check-label" for="support3">Phân phối sản phẩm hàng hoá</label>
                     </div>
                 </div>
+                <br>
+                <br>
                 <div class="d-flex justify-content-center">
                     <button type="button" class="btn btn-secondary" onclick="previousSection(2)">Quay lại</button>
                     <button type="submit" class="btn btn-success ms-2">Xác nhận</button>
