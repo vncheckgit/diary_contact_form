@@ -13,8 +13,9 @@
         body {
             margin: 0;
             padding: 0;
-            height: 100vh;
-            background: linear-gradient(to bottom, #90EE90, #DFFFD7);
+            height: 100%;
+            background-size: cover;
+            background: linear-gradient(to bottom, #DFFFD7, #90EE90);
         }
         
         .section {
@@ -111,16 +112,17 @@
             action="https://script.google.com/macros/s/AKfycbx2tQ6Eh3o_0erSGqmIOJR8pR7g9aG2uPJwkCDSWSuVIbBFsVE3oc_vJkhQtw3KYd_s/exec">
             <div class="section active" id="section1">
                 <h2>THÔNG TIN SẢN XUẤT</h2>
+                <br>
                 <div class="mb-3">
-                    <label for="organization" class="form-label">Tên đơn vị</label>
+                    <label for="organization" class="form-label">Tên đơn vị:</label>
                     <input type="text" class="form-control" id="organization" name="organization" required>
                 </div>
                 <div class="mb-3">
-                    <label for="phone" class="form-label">Số điện thoại</label>
+                    <label for="phone" class="form-label">Số điện thoại:</label>
                     <input type="text" class="form-control" id="phone" name="phone" required>
                 </div>
                 <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
+                    <label for="email" class="form-label">Email:</label>
                     <input type="email" class="form-control" id="email" name="email" required>
                 </div>
                 <br>
@@ -131,32 +133,33 @@
             </div>
             <div class="section" id="section2">
                 <h2>THÔNG TIN SẢN XUẤT</h2>
+                <br>
                 <div class="mb-3">
-                    <label class="form-label d-block">Tên chủng loại</label>
+                    <label class="form-label d-block">Tên chủng loại:</label>
                     <div style="display: flex; justify-content: space-between;">
                         <div class="form-check form-check-inline" style="flex: 1;">
                             <input class="form-check-input" type="radio" name="category" id="plant" value="cây trồng"
                                 required>
-                            <label class="form-check-label" for="plant">Cây trồng</label>
+                            <label class="form-check-label" for="plant">Cây trồng:</label>
                         </div>
                         <div class="form-check form-check-inline" style="flex: 1;">
                             <input class="form-check-input" type="radio" name="category" id="animal" value="vật nuôi"
                                 required>
-                            <label class="form-check-label" for="animal">Vật nuôi</label>
+                            <label class="form-check-label" for="animal">Vật nuôi:</label>
                         </div>
                         <div class="form-check form-check-inline" style="flex: 1;">
                             <input class="form-check-input" type="radio" name="category" id="product" value="sản phẩm"
                                 required>
-                            <label class="form-check-label" for="product">Sản phẩm</label>
+                            <label class="form-check-label" for="product">Sản phẩm:</label>
                         </div>
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="quantity" class="form-label">Sản lượng</label>
+                    <label for="quantity" class="form-label">Sản lượng:</label>
                     <input type="number" class="form-control" id="quantity" name="quantity" required>
                 </div>
                 <div class="mb-3">
-                    <label for="unit" class="form-label">Đơn vị tính</label>
+                    <label for="unit" class="form-label">Đơn vị tính:</label>
                     <select class="form-select" id="unit" name="unit" required>
                         <option value="Kg">Kg</option>
                         <option value="Tấn">Tấn</option>
@@ -165,7 +168,7 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label d-block">Thời gian</label>
+                    <label class="form-label d-block">Thời gian:</label>
                     <div style="display: flex; justify-content: space-between;">
                         <div class="form-check form-check-inline" style="flex: 1;">
                             <input class="form-check-input" type="radio" name="time" id="month" value="Tháng" required>
@@ -178,7 +181,7 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label d-block">Tiêu chuẩn</label>
+                    <label class="form-label d-block">Tiêu chuẩn:</label>
                     <div style="display: flex; justify-content: space-between;">
                         <div class="form-check form-check-inline" style="flex: 1;">
                             <input class="form-check-input" type="radio" name="standard" id="yes" value="Có" required>
@@ -199,18 +202,21 @@
             </div>
             <div class="section" id="section3">
                 <h2>THÔNG TIN CẦN HỖ TRỢ</h2>
+                <br>
                 <div class="mb-3">
-                    <label class="form-label">Anh chị cần hỗ trợ gì</label><br>
+                    <label class="form-label">Anh chị cần hỗ trợ gì?</label><br>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="support1" name="support1"
                             value="Tiêu chuẩn chất lượng">
                         <label class="form-check-label" for="support1">Tiêu chuẩn chất lượng</label>
                     </div>
+                    <br>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="support2" name="support2"
                             value="Quy trình canh tác">
                         <label class="form-check-label" for="support2">Quy trình canh tác</label>
                     </div>
+                    <br>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="support3" name="support3"
                             value="Phân phối sản phẩm hàng hoá">
