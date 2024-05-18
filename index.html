@@ -113,11 +113,10 @@
         <div class="spinner"></div>
     </div>
     <img class="header-image" src="km_nkdt.jpg" alt="Header Image">
-    <div class="container mt-5" style="margin-bottom: 10vh; margin-top: 2vh;">   
+    <div class="container" style="margin-bottom: 10vh; margin-top: 2vh;">   
         <form id="multi-section-form" method="post">
             <div class="section active" id="section1">
                 <h2>THÔNG TIN LIÊN HỆ</h2>
-                <br>
                 <div class="mb-3">
                     <label for="organization" class="form-label">Tên đơn vị:</label>
                     <input type="text" class="form-control" id="organization" name="organization" required>
@@ -130,13 +129,12 @@
                     <label for="email" class="form-label">Email:</label>
                     <input type="email" class="form-control" id="email" name="email" required>
                 </div>
-                <br>
-                <br>
                 <div class="d-flex justify-content-center">
                     <button type="button" class="btn btn-primary" onclick="validateNext(2)">Tiếp theo</button>
                 </div>
             </div>
             <div class="section" id="section2">
+                <br>
                 <h2>THÔNG TIN SẢN XUẤT</h2>
                 <br>
                 <div class="mb-3">
@@ -199,13 +197,13 @@
                     </div>
                 </div>
                 <br>
-                <br>
                 <div class="d-flex justify-content-center">
                     <button type="button" class="btn btn-secondary" onclick="previousSection(1)">Quay lại</button>
                     <button type="button" class="btn btn-primary ms-2" onclick="validateNext(3)">Tiếp theo</button>
                 </div>
             </div>
             <div class="section" id="section3">
+                <br>
                 <h2>THÔNG TIN CẦN HỖ TRỢ</h2>
                 <br>
                 <div class="mb-3">
@@ -229,11 +227,11 @@
                     </div>
                 </div>
                 <br>
+                <br>
                 <div class="d-flex justify-content-center">
                     <button type="button" class="btn btn-secondary" onclick="previousSection(2)">Quay lại</button>
                     <button type="submit" class="btn btn-success ms-2">Xác nhận</button>
                 </div>
-                <br>
                 <br>
             </div>
         </form>
